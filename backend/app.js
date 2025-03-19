@@ -3,12 +3,13 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const path = require("path")
 const postsRoutes = require("./routes/posts");
+const userRoutes = require("./routes/user");
 
 const app = express();
 
 mongoose.connect(
   // add your moongose string
-  "mongodb+srv://Jeel:xyz@cluster0.aqoiy.mongodb.net/node-angular?retryWrites=true&w=majority&appName=Cluster0",
+  "mongodb+srv://Jeel:JeelMongoDB703@cluster0.aqoiy.mongodb.net/node-angular?retryWrites=true&w=majority&appName=Cluster0",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -27,7 +28,7 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
@@ -37,5 +38,6 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/posts", postsRoutes);
+app.use("/api/user", userRoutes);
 
 module.exports = app;

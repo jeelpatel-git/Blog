@@ -1,0 +1,17 @@
+.mat-mdc-form-field , .mat-mdc-input-element{
+  width: 100%;
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+.mdc-card {
+    padding: 10px;
+  }
+
+.login-container{
+  width: 100%;
+  max-width: 560px;
+  margin: auto;
+}
