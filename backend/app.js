@@ -9,7 +9,7 @@ const app = express();
 
 mongoose.connect(
   // add your moongose string
-  "mongodb+srv://Jeel:JeelMongoDB703@cluster0.aqoiy.mongodb.net/node-angular?retryWrites=true&w=majority&appName=Cluster0",
+  "mongodb+srv://Jeel:"+ process.env.MONGO_ATLAS_PW +"@cluster0.aqoiy.mongodb.net/node-angular?retryWrites=true&w=majority&appName=Cluster0",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

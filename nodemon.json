@@ -1,0 +1,6 @@
+{
+    "env": {
+        "MONGO_ATLAS_PW":"JeelMongoDB703",
+        "JWT_KEY":"secret_key_for_blog"
+    }
+}
